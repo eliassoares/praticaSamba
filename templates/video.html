@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title%}
+    {{video.titulo}}
+{% endblock%}
+
+{% block videos %}
+    <h1>{{video.titulo}}</h1>
+    {% if video.video %}
+    	<video width="320" height="240" controls>
+  			<source src="{{ url_for('videos.media', filename=video.video) }}" type="video/mp4">
+		</video> 
+    {% endif %}
+    <hr />
+    <p>
+        {{video.texto|safe}}
+    </p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block videos %}
+<form method="post" action="{{ url_for('videos.cadastro') }}" enctype="multipart/form-data">
+   <label>Titulo:<br />
+        <input type="text" name="titulo" id="titulo" />
+   </label>
+   <br />
+   <label>Descrição:<br />
+        <textarea name="texto" id="texto"></textarea>
+   </label>
+   <br />
+   <label> Vídeo:<br />
+      <input type="file" name="video" id="video" />
+   </label>
+   <input type="submit" value="Upar" />
+</form>
+{% endblock %}

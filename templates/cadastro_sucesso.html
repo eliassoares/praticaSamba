@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}
+    Vídeo {{id_novo_video}} inserida com sucesso
+{% endblock %}
+
+{% block videos %}
+    <h1>Vídeo {{id_novo_video}} upado com sucesso!</h1>
+    <a href="{{url_for('videos.video', video_id=id_novo_video)}}"> Assistir vídeo </a><br />
+    <a href="{{url_for('videos.cadastro')}}"> Enviar novo vídeo </a>
+{% endblock %}

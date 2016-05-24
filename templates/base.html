@@ -1,0 +1,20 @@
+{%- extends "bootstrap/base.html" %}
+{% import "bootstrap/utils.html" as utils %}
+{% block title %} {{title or "Vídeos"}} {% endblock %}
+{% block navbar -%}
+    <nav class="navbar navbar-default">
+       <a class="navbar-brand" href="#"><img src="{{url_for('static', filename='samba.png')}}" style="height:30px;"></a>
+       <ul class="nav navbar-nav">
+         <li><a href="{{url_for('videos.index')}}">HOME</a> </li>
+         <li><a href="{{url_for('videos.cadastro')}}">ENVIOS</a></li>
+       </ul>
+    </nav>
+{%- endblock navbar %}
+
+{% block content %}
+ <div class="container">
+    <div class="jumbotron">
+      {% block videos %}
+      {% endblock %}
+    </div>
+{%- endblock content%}

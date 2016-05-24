@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block videos %}
+<h1>Todos os vídeos</h1>
+<ul>
+    {% for video in videos %}
+    <li>
+        <a href="{{url_for('videos.video', video_id=video.id)}}">
+         {{video.titulo}}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
